@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dabali — Newari Kitchen & Courtyard</title>
+<meta name="description" content="Newari cooking from a restored courtyard house in Bhaktapur, Nepal." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">Dabali</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">Our story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#reservations" class="btn btn-primary nav-cta">Reserve a table</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#about">Our story</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+  <a href="#reservations" class="btn btn-primary" style="margin-top:1.5rem;text-align:center;">Reserve a table</a>
+</div>
+
+<main id="home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Bhaktapur, Nepal</p>
+      <h1>Newari cooking, served the way our courtyard remembers it.</h1>
+      <p class="hero-desc">Dabali sits inside a hundred-year-old Newar courtyard house — three generations of recipes, cooked over coal and shared at long communal tables.</p>
+      <div class="hero-buttons">
+        <a href="#reservations" class="btn btn-primary">Reserve a table</a>
+        <a href="#menu" class="btn btn-outline">Explore the menu</a>
+      </div>
+      <p class="hero-hours">Open daily from 11:00</p>
+    </div>
+    <div class="hero-image">
+      <img src="images/chatamari.jpg" alt="Chatamari, a Newari rice crepe, fresh from the pan">
+    </div>
+  </section>
+
+  <!-- FEATURED DISHES -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">From the kitchen</p>
+        <h2>Made to be remembered</h2>
+      </div>
+      <a href="#menu" class="link-arrow">View full menu →</a>
+    </div>
+    <div class="dish-grid">
+      <div class="dish-card">
+        <img src="images/chatamari.jpg" alt="Chatamari">
+        <div class="dish-row"><h3>Chatamari</h3><span class="price">Rs 320</span></div>
+        <p>Rice-flour crepe from the Newar kitchen, topped with minced buffalo, egg and green onion.</p>
+        <span class="tag">contains egg</span>
+      </div>
+      <div class="dish-card">
+        <img src="images/choila.jpg" alt="Choila">
+        <div class="dish-row"><h3>Choila</h3><span class="price">Rs 420</span></div>
+        <p>Smoked buffalo, chargrilled and tossed with mustard oil, timur pepper and beaten rice.</p>
+        <span class="tag">🌶 spicy</span>
+      </div>
+      <div class="dish-card">
+        <div class="photo-placeholder">Photo coming soon</div>
+        <div class="dish-row"><h3>Jhol Momo</h3><span class="price">Rs 320</span></div>
+        <p>Steamed dumplings set in a sesame and tomato broth, finished with toasted spice oil.</p>
+        <span class="tag">🌶 spicy</span>
+      </div>
+      <div class="dish-card">
+        <img src="images/yomari.jpg" alt="Yomari">
+        <div class="dish-row"><h3>Yomari</h3><span class="price">Rs 220</span></div>
+        <p>Steamed rice dough shaped like a marigold bud, filled with molasses and sesame.</p>
+        <span class="tag">🌿 vegetarian</span>
+      </div>
+      <div class="dish-card">
+        <img src="images/kwati.jpg" alt="Kwati">
+        <div class="dish-row"><h3>Kwati</h3><span class="price">Rs 300</span></div>
+        <p>Nine-bean soup, sprouted and slow-simmered — served during Gunla, and by request year-round.</p>
+        <span class="tag">🌿 vegetarian</span>
+      </div>
+      <div class="dish-card">
+        <img src="images/khaja-set.jpg" alt="Newari Khaja Set">
+        <div class="dish-row"><h3>Newari Khaja Set</h3><span class="price">Rs 650</span></div>
+        <p>The full courtyard spread: beaten rice, choila, bara, aloo tama, achar and a pour of aila.</p>
+        <span class="tag">for sharing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="section section-alt" id="about">
+    <div class="about-grid">
+      <img src="images/newari-culture.jpg" alt="A festival gathering at Bhaktapur Durbar Square" class="about-img">
+      <div>
+        <p class="eyebrow">Since 1994</p>
+        <h2>A courtyard kitchen, three generations deep</h2>
+        <p>Dabali began as a single coal stove in a family courtyard in Bhaktapur. What started as Saturday feasts for relatives grew, recipe by recipe, into a restaurant that still cooks the way our grandmothers did — buffalo smoked over coal, spices ground by hand, beaten rice pounded fresh each morning.</p>
+        <p>Everything on the table is sourced from farmers within the Kathmandu Valley — the same relationships our family has kept for decades.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <h2 class="section-title-solo">What sets the table</h2>
+    <div class="feature-grid">
+      <div class="feature"><h3>Cooked over coal</h3><p>Choila and sukuti are still smoked the traditional way, not on a gas flame.</p></div>
+      <div class="feature"><h3>Valley-sourced</h3><p>Produce and buffalo come from farms we've worked with for over a decade.</p></div>
+      <div class="feature"><h3>A living recipe book</h3><p>Recipes passed down rather than standardized — expect small seasonal shifts.</p></div>
+      <div class="feature"><h3>The courtyard itself</h3><p>Restored brick and carved wood, seating for both quiet dinners and large tables.</p></div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section section-alt" id="menu">
+    <p class="eyebrow center">The full spread</p>
+    <h2 class="section-title-solo center">Menu</h2>
+
+    <div class="menu-tabs" id="menuTabs">
+      <button class="tab active" data-cat="All">All</button>
+      <button class="tab" data-cat="Khaja — small plates">Khaja</button>
+      <button class="tab" data-cat="Mains">Mains</button>
+      <button class="tab" data-cat="Momo">Momo</button>
+      <button class="tab" data-cat="Sweet">Sweet</button>
+      <button class="tab" data-cat="To Drink">To Drink</button>
+    </div>
+
+    <div class="menu-list" id="menuList">
+
+      <div class="menu-category" data-cat="Khaja — small plates">
+        <h3>Khaja — small plates</h3>
+        <div class="menu-item"><div><h4>Bara <span class="icon-veg">🌿</span></h4><p>Griddled black lentil pancake, plain or topped with egg.</p></div><span class="price">Rs 280</span></div>
+        <div class="menu-item"><div><h4>Chatamari</h4><p>Rice crepe with minced buffalo, egg and spring onion.</p></div><span class="price">Rs 320</span></div>
+        <div class="menu-item"><div><h4>Sukuti <span class="icon-spicy">🌶</span></h4><p>Sun-dried buffalo, pan-tossed with garlic and dried chilli.</p></div><span class="price">Rs 380</span></div>
+        <div class="menu-item"><div><h4>Aloo Tama <span class="icon-veg">🌿</span><span class="icon-spicy">🌶</span></h4><p>Potato and bamboo shoot simmered in a black-eyed pea curry.</p></div><span class="price">Rs 260</span></div>
+        <div class="menu-item"><div><h4>Woh (Lentil Cake) <span class="icon-veg">🌿</span></h4><p>Steamed lentil cake, served with tomato achar.</p></div><span class="price">Rs 240</span></div>
+      </div>
+
+      <div class="menu-category" data-cat="Mains">
+        <h3>Mains</h3>
+        <div class="menu-item"><div><h4>Choila <span class="icon-spicy">🌶</span></h4><p>Chargrilled smoked buffalo with mustard oil and timur.</p></div><span class="price">Rs 420</span></div>
+        <div class="menu-item"><div><h4>Duck Choila <span class="icon-spicy">🌶</span></h4><p>Choila prepared with farm duck, smoked over the coal fire.</p></div><span class="price">Rs 480</span></div>
+        <div class="menu-item"><div><h4>Bhutan <span class="icon-spicy">🌶</span></h4><p>Stir-fried offal with garlic, ginger and dried chilli.</p></div><span class="price">Rs 350</span></div>
+        <div class="menu-item"><div><h4>Newari Thali</h4><p>Rice, choila, two seasonal curries, achar and a side of bara.</p></div><span class="price">Rs 650</span></div>
+        <div class="menu-item"><div><h4>Palti Masu <span class="icon-spicy">🌶</span></h4><p>Slow-cooked mutton curry, bone-in, finished with ghee.</p></div><span class="price">Rs 460</span></div>
+      </div>
+
+      <div class="menu-category" data-cat="Momo">
+        <h3>Momo</h3>
+        <div class="menu-item"><div><h4>Buff Momo</h4><p>Steamed dumplings, water-buffalo filling, served with tomato achar.</p></div><span class="price">Rs 280</span></div>
+        <div class="menu-item"><div><h4>Chicken Momo</h4><p>Steamed dumplings with a ginger-forward chicken filling.</p></div><span class="price">Rs 300</span></div>
+        <div class="menu-item"><div><h4>Vegetable Momo <span class="icon-veg">🌿</span></h4><p>Cabbage, carrot and paneer filling.</p></div><span class="price">Rs 260</span></div>
+        <div class="menu-item"><div><h4>Jhol Momo <span class="icon-spicy">🌶</span></h4><p>Steamed momo set in a warm sesame-tomato broth.</p></div><span class="price">Rs 320</span></div>
+        <div class="menu-item"><div><h4>Kothey Momo</h4><p>Pan-seared on one side, steamed the rest of the way.</p></div><span class="price">Rs 300</span></div>
+      </div>
+
+      <div class="menu-category" data-cat="Sweet">
+        <h3>Sweet</h3>
+        <div class="menu-item"><div><h4>Yomari <span class="icon-veg">🌿</span></h4><p>Steamed rice dumpling filled with molasses and sesame.</p></div><span class="price">Rs 220</span></div>
+        <div class="menu-item"><div><h4>Sel Roti <span class="icon-veg">🌿</span></h4><p>Ring-shaped rice doughnut, served warm with honey.</p></div><span class="price">Rs 180</span></div>
+        <div class="menu-item"><div><h4>Thon <span class="icon-veg">🌿</span></h4><p>Slow-cooked rice pudding with cardamom and cashew.</p></div><span class="price">Rs 200</span></div>
+      </div>
+
+      <div class="menu-category" data-cat="To Drink">
+        <h3>To Drink</h3>
+        <div class="menu-item"><div><h4>Aila</h4><p>Traditional distilled rice spirit, served in a clay cup.</p></div><span class="price">Rs 250</span></div>
+        <div class="menu-item"><div><h4>Thwon <span class="icon-veg">🌿</span></h4><p>Newari rice beer, lightly sweet and unfiltered.</p></div><span class="price">Rs 220</span></div>
+        <div class="menu-item"><div><h4>Masala Chiya <span class="icon-veg">🌿</span></h4><p>Milk tea brewed with clove, cardamom and ginger.</p></div><span class="price">Rs 120</span></div>
+        <div class="menu-item"><div><h4>Lassi <span class="icon-veg">🌿</span></h4><p>Churned yoghurt, plain or with seasonal fruit.</p></div><span class="price">Rs 180</span></div>
+      </div>
+
+    </div>
+    <p class="menu-note">Prices in Nepali rupees. Ask your server about daily specials and current allergen information.</p>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <p class="eyebrow">What guests say</p>
+    <h2 class="section-title-solo">Notes from the courtyard</h2>
+    <div class="review-grid">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The choila tasted like the version my grandmother used to make in Bhaktapur — smoky, not overdressed. First place in years that's gotten it right."</p>
+        <p class="review-author">Anisha R. · Google</p>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"We asked the servers to just bring us whatever they'd order for themselves. Ended up with the khaja set and a round of aila. Best meal of our Nepal trip."</p>
+        <p class="review-author">Marcus T. · TripAdvisor</p>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★☆</div>
+        <p class="review-text">"Courtyard seating in the evening is lovely, string lights and all. Gets busy on weekends so book ahead. The yomari alone is worth the trip."</p>
+        <p class="review-author">Sunita M. · Google</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section section-alt" id="gallery">
+    <p class="eyebrow center">A look inside</p>
+    <h2 class="section-title-solo center">Gallery</h2>
+    <div class="gallery-grid" id="galleryGrid">
+      <img src="images/newari-culture.jpg" alt="A festival gathering at Bhaktapur Durbar Square">
+      <img src="images/chatamari.jpg" alt="Chatamari, fresh off the tawa">
+      <img src="images/khaja-set.jpg" alt="The full Newari khaja spread">
+      <img src="images/choila.jpg" alt="Choila, smoked over coal">
+      <img src="images/kwati.jpg" alt="Kwati, the nine-bean soup">
+      <img src="images/yomari.jpg" alt="Yomari, shaped by hand">
+    </div>
+  </section>
+
+  <!-- RESERVATION CTA -->
+  <section class="cta-band">
+    <h2>Your table in the courtyard is waiting.</h2>
+    <a href="#reservations" class="btn btn-accent">Reserve a table</a>
+  </section>
+
+  <!-- RESERVATIONS -->
+  <section class="section" id="reservations">
+    <p class="eyebrow center">Book ahead</p>
+    <h2 class="section-title-solo center">Reserve a table</h2>
+
+    <form id="reservationForm" class="form" novalidate>
+      <div id="reservationError" class="form-error" style="display:none;"></div>
+
+      <div class="form-row">
+        <label>Full name
+          <input type="text" id="resName" placeholder="Your name">
+          <span class="err" id="err-resName"></span>
+        </label>
+        <label>Phone
+          <input type="tel" id="resPhone" placeholder="+977 98XXXXXXXX">
+          <span class="err" id="err-resPhone"></span>
+        </label>
+      </div>
+
+      <label>Email
+        <input type="email" id="resEmail" placeholder="you@example.com">
+        <span class="err" id="err-resEmail"></span>
+      </label>
+
+      <div class="form-row form-row-3">
+        <label>Date
+          <input type="date" id="resDate">
+          <span class="err" id="err-resDate"></span>
+        </label>
+        <label>Time
+          <input type="time" id="resTime">
+          <span class="err" id="err-resTime"></span>
+        </label>
+        <label>Guests
+          <input type="number" id="resGuests" min="1" max="20" value="2">
+          <span class="err" id="err-resGuests"></span>
+        </label>
+      </div>
+
+      <label>Special request (optional)
+        <textarea id="resNote" rows="3" placeholder="Dietary needs, a birthday, seating preference…"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-block" id="resSubmit">Reserve a table</button>
+      <p class="form-footnote">For parties larger than 10, please call us directly at +977 1 591 0234.</p>
+    </form>
+
+    <div id="reservationConfirm" class="confirm" style="display:none;">
+      <div class="confirm-check">✓</div>
+      <h3>Your table has been reserved.</h3>
+      <p id="confirmEmailLine" class="confirm-sub"></p>
+      <div class="confirm-details" id="confirmDetails"></div>
+      <button class="link-btn" id="resAgain">Make another reservation</button>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section section-alt">
+    <div class="location-grid">
+      <div>
+        <p class="eyebrow">Find us</p>
+        <h2>In the old town of Bhaktapur</h2>
+        <div class="loc-line">📍 Itachhen Marg, Bhaktapur, Nepal</div>
+        <div class="loc-line">🕐 Sun–Thu: 11:00–21:00 &nbsp;·&nbsp; Fri–Sat: 11:00–22:00</div>
+        <div class="loc-line">📞 +977 1 591 0234</div>
+        <div class="hero-buttons" style="margin-top:1.5rem;">
+          <a href="https://www.google.com/maps/search/?api=1&query=Bhaktapur%20Durbar%20Square" target="_blank" rel="noreferrer" class="btn btn-primary">Get directions</a>
+          <a href="tel:+97715910234" class="btn btn-outline">Call the restaurant</a>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe title="Map to Dabali" loading="lazy" src="https://maps.google.com/maps?q=Bhaktapur%20Durbar%20Square&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <p class="eyebrow center">Get in touch</p>
+    <h2 class="section-title-solo center">Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <h3>Send a message</h3>
+        <form id="contactForm" class="form" novalidate>
+          <label>Full name
+            <input type="text" id="cName" placeholder="Your name">
+            <span class="err" id="err-cName"></span>
+          </label>
+          <label>Email
+            <input type="email" id="cEmail" placeholder="you@example.com">
+            <span class="err" id="err-cEmail"></span>
+          </label>
+          <label>Phone (optional)
+            <input type="tel" id="cPhone" placeholder="+977 98XXXXXXXX">
+          </label>
+          <label>Message
+            <textarea id="cMessage" rows="5" placeholder="How can we help?"></textarea>
+            <span class="err" id="err-cMessage"></span>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Send message</button>
+        </form>
+        <div id="contactConfirm" class="confirm-inline" style="display:none;">✓ Message sent. We'll get back to you shortly.</div>
+      </div>
+      <div>
+        <h3>Reach us directly</h3>
+        <div class="loc-line">📍 Itachhen Marg, Bhaktapur, Nepal</div>
+        <div class="loc-line">📞 +977 1 591 0234</div>
+        <div class="loc-line">✉️ hello@dabalikitchen.com</div>
+        <div class="loc-line">🕐 Sun–Thu: 11:00–21:00 · Fri–Sat: 11:00–22:00</div>
+        <a href="tel:+97715910234" class="btn btn-outline" style="margin-top:1rem;display:inline-block;">Call us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-logo">Dabali</p>
+      <p>Newari cooking from a restored courtyard house in Bhaktapur.</p>
+    </div>
+    <div>
+      <p class="footer-head">Explore</p>
+      <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">Our story</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </div>
+    <div>
+      <p class="footer-head">Hours</p>
+      <p>Sun–Thu: 11:00–21:00</p>
+      <p>Fri–Sat: 11:00–22:00</p>
+    </div>
+    <div>
+      <p class="footer-head">Contact</p>
+      <p>Itachhen Marg, Bhaktapur, Nepal</p>
+      <p>+977 1 591 0234</p>
+      <p>hello@dabalikitchen.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Dabali Kitchen. A fictional restaurant, built as a design portfolio piece.</span>
+    <div><span>Privacy policy</span> <span>Terms</span></div>
+  </div>
+</footer>
+
+<div class="bottom-bar">
+  <a href="tel:+97715910234">📞 Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Bhaktapur%20Durbar%20Square" target="_blank" rel="noreferrer">📍 Directions</a>
+  <a href="#reservations">📅 Reserve</a>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImage" src="" alt="">
+  <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
